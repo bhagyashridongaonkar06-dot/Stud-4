@@ -91,7 +91,7 @@ function onCustUpdate(){
         city : city.value,
         id:updateId
     }
-
+    customerForm.reset();
     let getIndex = customersArr.findIndex(e => e.id === updateId)
     customersArr[getIndex] = updateObj
 
