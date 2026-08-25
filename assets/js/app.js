@@ -81,13 +81,15 @@ function onCustomerEdit(ele) {
 
 function onCustUpdate(){
     let updateId = this.getAttribute('editId')
+    this.removeAttribute('editId')
     cl(updateId)
 
     let updateObj = {
         name : name1.value,
         email : email.value,
         contact : contact.value,
-        city : city.value
+        city : city.value,
+        id:updateId
     }
 
     let getIndex = customersArr.findIndex(e => e.id === updateId)
